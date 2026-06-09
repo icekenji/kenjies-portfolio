@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Khenjie | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="style.css">
+
+   </head>
+<body>
+  <!--NAVBAR-->
+  <nav>
+  <div class="logo">Khenjie | Portfolio</div>
+
+  <!-- Mobile Menu Button -->
+  <button class="menu-btn" id="menu-btn">☰</button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#certificates">Achievements</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="dashboard/dashboard.html">Animations</a></li>
+  </ul>
+</nav>
+
+  <!-- HERO -->
+  <header id="home">
+    <div class="hero-content">
+      <div class="hero-photo-wrapper">
+        <img src="assets/myphoto.png" alt="Khenjie's photo" class="hero-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="hero-photo-placeholder" aria-hidden="true">KJ</div>
+      </div>
+      <h1>Hi, I’m <span>Kylle Khenjie Ain Cejas!</span></h1>
+      <p class="hero-role">Computer Technician • BSIS Student</p>
+      <p class="hero-desc">
+        I’m a passionate tech enthusiast based in Davao, Philippines. I love building clean digital experiences — from maintaining computer systems to crafting responsive websites. Always learning, always creating.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" class="certificates-section">
+    <p class="section-label">CERTIFICATIONS &amp; AWARDS</p>
+    <h2 class="certs-heading">Achievements</h2>
+
+    <div class="certs-grid">
+
+      <div class="cert-card" onclick="openCertModal('assets/cert-ncII.png', 'NCII — Computer Systems Servicing')">
+        <div class="card-img-wrap cert-img-wrap">
+          <img src="assets/cert-ncII.png" alt="NCII Certificate preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="cert-icon">🥇</div>
+        <h3 class="cert-title">NCII — Computer Systems Servicing</h3>
+        <p class="cert-sub">NATIONAL CERTIFICATION</p>
+      </div>
+
+      <div class="cert-card" onclick="openCertModal('assets/mtv.png', 'Best MTV Spoof')">
+        <div class="card-img-wrap cert-img-wrap">
+          <img src="assets/mtv.png" alt="Best MTV Spoof preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="cert-icon">🎬</div>
+        <h3 class="cert-title">Best MTV Spoof</h3>
+        <p class="cert-sub">K-POP CATEGORY · MTV SPOOF</p>
+      </div>
+
+      <div class="cert-card" onclick="openCertModal('assets/bytefest.png', '1st Runner Up — ByteFest: Cluster 1')">
+        <div class="card-img-wrap cert-img-wrap">
+          <img src="assets/bytefest.png" alt="ByteFest Certificate preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="cert-icon">🥇</div>
+        <h3 class="cert-title">1st Runner Up - ByteFest: Cluster 1</h3>
+        <p class="cert-sub">BYTEFEST COMPETITION</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERT MODAL -->
+  <div class="cert-modal-overlay" id="certModal" onclick="closeCertModal()">
+    <div class="cert-modal-box" onclick="event.stopPropagation()">
+      <button class="cert-modal-close" onclick="closeCertModal()" aria-label="Close">✕</button>
+      <img id="certModalImg" src="" alt="Certificate" class="cert-modal-img" />
+      <p id="certModalTitle" class="cert-modal-title"></p>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+  <p class="section-label">Services Offered</p>
+    <h2 class="certs-heading">Services</h2>
+
+  <div class="projects">
+    <div class="card">
+      <h3>Computer Technician</h3>
+      <p>
+        Hardware troubleshooting, software installation, system upgrades, and general computer maintenance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Programmer</h3>
+      <p>
+        Building modern websites and applications using HTML, CSS, and clean, efficient code.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Video / Photo Editor</h3>
+      <p>
+        Editing and enhancing photos and videos, creating clean visuals, smooth cuts, and engaging content.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- PROJECTS -->
+  <section id = "projects">
+    <p class="section-label">Projects & Protypes</p>
+    <h2 class="certs-heading">Projects</h2>
+
+    <div class="projects">
+      <div class="card project-card" onclick="openCertModal('assets/portfolio.png', 'Portfolio Website')">
+        <div class="card-img-wrap">
+          <img src="assets/portfolio.png" alt="Portfolio Website preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="card-click-hint">🖼️ Click to preview</div>
+        <h3>Portfolio Website</h3>
+        <p>A modern personal website built with HTML and CSS.</p>
+      </div>
+
+      <div class="card project-card" onclick="openCertModal('assets/system.png', 'Java Based System')">
+        <div class="card-img-wrap">
+          <img src="assets/system.png" alt="Java Based System preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="card-click-hint">🖼️ Click to preview</div>
+        <h3>Java Based System</h3>
+        <p>A desktop or console-based system built with Java, focusing on logic, data handling, and functionality.</p>
+      </div>
+
+      <div class="card project-card" onclick="openCertModal('assets/prototyp.png', 'Web-Based Prototype System')">
+        <div class="card-img-wrap">
+          <img src="assets/prototyp.png" alt="Web-Based Prototype System preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="card-click-hint">🖼️ Click to preview</div>
+        <h3>Web-Based Prototype System</h3>
+        <p>A responsive Web-Based Prototype System featuring clean layout, and user-friendly design.</p>
+      </div>
+
+      <div class="card project-card" onclick="openCertModal('assets/animation.png', 'Animation Styles')">
+        <div class="card-img-wrap">
+          <img src="assets/animation.png" alt="Animation Styles preview" class="card-thumb" onerror="this.parentElement.style.display='none'" />
+        </div>
+        <div class="card-click-hint">🖼️ Click to preview</div>
+        <h3>Animation Styles</h3>
+        <p>Animations such as flowers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id = "contact" class = "contact">
+    <h2>Contact</h2>
+    <p>Want to work together or just say hi?</p>
+    <a href="mailto:kenjie@kenhub.site">Email Me</a>
+  </section>
+
+  <footer>
+    © 2025 Khenjie ✨
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
